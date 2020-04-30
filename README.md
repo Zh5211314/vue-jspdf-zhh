@@ -4,7 +4,7 @@ vue使用jspdf导出pdf页面、导出pdf表格
 #cnpm install
 
 #修改autotable.js源代码
-打开这个地址vue-jspdf-zhh\node_modules\_jspdf-autotable@3.5.2@jspdf-autotable\dist，找到jspdf.plugin.autotable.js，打开这个js文件找到function getTheme(name)这个函数，将主题样式里面的所有head的fontStyle改为normal
+打开这个地址'vue-jspdf-zhh\node_modules\_jspdf-autotable@3.5.2@jspdf-autotable\dist'，找到jspdf.plugin.autotable.js，打开这个js文件找到function getTheme(name)这个函数，将主题样式里面的所有head的fontStyle改为normal
 
 #修改config文件夹下的index.js的启动的host改为localhost
 
