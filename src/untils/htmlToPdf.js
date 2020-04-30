@@ -48,7 +48,7 @@ export default{
         doc.addFont('pingfang.ttf', 'b', 'normal');
 
         doc.setFont('b');
-        // ===============================
+        // ================================
         
         // doc.autoTable({                   // 这是动态获取后台table数据数据导出，如果用这个，则注释掉 45行、67-77行即可
         //     styles: { fillColor: [0, 0, 0], font: 'b', textColor: [255,255,255] },
