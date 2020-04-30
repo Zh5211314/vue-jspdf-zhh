@@ -21,7 +21,8 @@ export default{
         let imgHeight = 592.28 / contentWidth * contentHeight
         let pageData = canvas.toDataURL('image/jpeg', 1.0)
         let PDF = new JsPDF('', 'pt', 'a4')
-        // pageData    这是图片地址base64
+        PDF.setFontSize(22);    //  因为画质模糊，所以这里字体设置大一些，就清晰了
+        // pageData    
         if (leftHeight < pageHeight) {
           PDF.addImage(pageData, 'JPEG', 0, 0, imgWidth, imgHeight)
         } else {
@@ -43,14 +44,15 @@ export default{
     Vue.prototype.getPdfTable = function (dom ,titles) {
         var doc = new JsPDF('p', 'pt'); // 获取实例
         var res = doc.autoTableHtmlToJson(document.getElementById("basic-table"));    // 这是获取页面已有table的数据导出  ，顺序不能乱放，要不就会乱码，获取的basic-table可以传参
+        
         // ===============================  设置字体
         doc.addFileToVFS('pingfang.ttf', moo)
         doc.addFont('pingfang.ttf', 'b', 'normal');
 
         doc.setFont('b');
-        // ================================
+        // ===============================
         
-        // doc.autoTable({                   // 这是动态获取后台table数据数据导出，如果用这个，则注释掉 45行、67-77行即可
+        // doc.autoTable({                   // 这是动态获取后台table数据数据导出，如果用这个，则注释掉 46行、69-79行即可
         //     styles: { fillColor: [0, 0, 0], font: 'b', textColor: [255,255,255] },
         //     theme: 'grid',
         //     body: [           // 可以传参
@@ -75,7 +77,7 @@ export default{
                 { header: '表头3', dataKey: 'america' },
             ],
         })
-
+        
         doc.text(40, 30, '个人号还挺好')      //  渲染title  // 可以传参
         document.getElementById(dom).src = doc.output('datauristring');   // 渲染pdf
         doc.save("table.pdf");   // 导出pdf   // 名字可以传参

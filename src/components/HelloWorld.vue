@@ -2,7 +2,7 @@
   <div class="hello">
       <button @click="getPdf('范德萨发的')">用html2canvans导出文件PDF</button>
       <p>我的优点：可以导出任何东西，图片或者文章或者表格，总之就是将你要导出的东西转成一张图片导出</p>
-      <p>我的缺点：导出画质模糊，字体偏小</p>
+      <p>我的缺点：导出画质模糊</p>
       <div id="pdfDom">
           <table border="1">
               <tr>
