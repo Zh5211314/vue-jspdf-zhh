@@ -1,5 +1,5 @@
 # vue-jspdf-zhh
-vue使用jspdf导出pdf页面、导出pdf表格
+vue使用jspdf导出pdf页面、导出pdf表格，关于里面表格的配置项看官方github：https://github.com/simonbengtsson/jsPDF-AutoTable
 
 # cnpm install
 
@@ -11,3 +11,4 @@ vue使用jspdf导出pdf页面、导出pdf表格
 # 修改config文件夹下的index.js的启动的host改为localhost，或者自己的启动ip
 
 # cnpm run dev
+
